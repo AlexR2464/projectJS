@@ -10,7 +10,14 @@ const personalMovieDB = {
   privat: false,
 };
 
-const movieFilm = prompt('Один из последних просмотренных фильмов?', '');
-const retingFilm = +prompt('На сколько оцените его?', '');
+let num = 0;
 
-personalMovieDB.movies[movieFilm] = retingFilm;
+while (num < 2) {
+  const movieFilm = prompt('Один из последних просмотренных фильмов?', '');
+  const retingFilm = +prompt('На сколько оцените его?', '');
+
+  num++;
+
+  personalMovieDB.movies[movieFilm] = retingFilm; 
+}
+
